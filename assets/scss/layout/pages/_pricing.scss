@@ -1,0 +1,175 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.12 Pricing css
+/*----------------------------------------*/
+
+.vl__single__pricing__box{
+    background: var(--vkl-text-text-white);
+    border-radius: 8px;
+    padding: 20px;
+    padding-top: 32px;
+    
+    & .title{
+        color: var(--vkl-text-text-2);
+        font-size: var(--vkl-font-size-font-s28);
+        line-height: var(--vkl-specing-height24);
+        font-weight: var(--vkl-weight-bold);
+        margin-bottom: 24px;
+    }
+    &__inner{
+        background: var(--vkl-bg-bg-2);
+        border-radius: 8px;
+        padding: 24px;
+        @media #{$md}{
+            padding: 20px;
+        }
+        @media #{$xl}{
+            padding: 20px;
+        }
+        & .vl-pricing-heading{
+            & .title{
+                color: var(--vkl-text-text-2);
+                font-size: var(--vkl-font-size-font-s44);
+                line-height: var(--vkl-specing-44);
+                font-weight: var(--vkl-weight-semibold);
+                span.subheading {
+                    color: var(--vkl-text-text-3);
+                    font-size: var(--vkl-font-size-font-s18);
+                    line-height: var(--vkl-specing-18);
+                    font-weight: var(--vkl-weight-medium);
+                }
+            }
+            & p{
+                border-bottom: 1px solid #DEDEDE;
+                padding-bottom: 24px;
+                margin-bottom: 24px;
+            }
+        }
+        & .vl__pricing__item{
+            & li{
+                list-style: none;
+                font-size: var(--vkl-font-size-font-s20);
+                line-height: var(--vkl-specing-height20);
+                font-weight: var(--vkl-weight-medium);
+                margin-bottom: 24px;
+
+                @media #{$md,$xs}{
+                    font-size: 18px;
+                }
+                @media #{$xl}{
+                    font-size: 18px;
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                & span{
+                    height: 20px;
+                    width: 20px;
+                    line-height: 18px;
+                    border-radius: 50px;
+                    background: var(--vkl-text-text-1);
+                    color: var(--vkl-text-text-white);
+                    display: inline-block;
+                    text-align: center;
+                    font-size: 12px;
+                    margin-right: 4px;
+                    padding-top: 3px;
+                }
+            }
+        }
+    }
+    &.active{
+        & .vl__single__pricing__box__inner{
+            background: var(--vkl-text-text-1);
+            & .vl-pricing-heading{
+                & .title{
+                    color: var(--vkl-text-text-white);
+                    & .subheading{
+                        color: var(--vkl-text-text-white);
+                    }
+                }
+                & p{
+                    color: rgba(255, 255, 255, 0.90);
+                }
+            }
+            & .vl__pricing__item{
+                & li{
+                    color: var(--vkl-text-text-white);
+                    & span{
+                        background: var(--vkl-text-text-white);
+                        color: var(--vkl-text-text-2);
+                    }
+                }
+            }
+            & .vl-primary-btn-4{
+                background: var(--vkl-text-text-white);
+                color: var(--vkl-text-text-2);
+                & span{
+                    background: var(--vkl-text-text-2);
+                    color: var(--vkl-text-text-white);
+                }
+                &::after{
+                    background: transparent;
+                }
+            }
+        }
+    }
+}
+
+.tre-shap{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+
+// pricing list
+.pricing__item__flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #E7E7E7;
+    &:last-child{
+        border-bottom: transparent;
+        margin: 0;
+        padding: 0;
+        @media #{$md,$xs}{
+            margin-bottom: 0px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #E7E7E7;
+        }
+    }
+    &-content{
+        &-title{
+            color: var(--vkl-text-text-2);
+            font-size: var(--vkl-font-size-font-s20);
+            line-height: var(--vkl-specing-height20);
+            font-weight: var(--vkl-weight-bold);
+            padding-bottom: 16px;
+            transition: .3s;
+            &:hover{
+                color: var(--vkl-text-text-1);
+                transition: .3s;
+            }
+        }
+        & p{
+            color: #282928;
+            line-height: var(--vkl-specing-height18);
+        }
+    }
+    &-price{
+        &-title{
+            color: var(--vkl-text-text-1);
+            font-size: var(--vkl-font-size-font-s20);
+            line-height: var(--vkl-specing-height20);
+            padding-bottom: 12px;
+        }
+        & p{
+            text-align: end;
+        }
+    }
+}

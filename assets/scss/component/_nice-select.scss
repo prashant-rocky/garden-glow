@@ -1,0 +1,32 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.6 Nice Select
+/*----------------------------------------*/
+
+.nice-select.vl-nice-select {
+    border: transparent;
+    margin-bottom: 20px;
+    height: 56px;
+    line-height: 56px;
+    color:var(--vkl-text-text-3);
+    font-size: 20px;
+    font-weight: 500;
+    &:focus{
+        outline: none;
+    }
+    &::after{
+        border-bottom: 2px solid var(--vkl-text-text-2);
+        border-right: 2px solid var(--vkl-text-text-2);
+        height: 8px;
+        width: 8px;
+    }
+    &-2{
+        background: var(--vkl-bg-bg-2);
+        border-radius: 8px;
+    }
+    &-3{
+        font-size: 16px;
+    }
+}
+

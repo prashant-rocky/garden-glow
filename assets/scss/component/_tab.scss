@@ -1,0 +1,88 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.11 Tab
+/*----------------------------------------*/
+.vl-tab-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    @media #{$md,$xs}{
+        display: block;
+    }
+}
+.vl-baner-tab-thumb img {
+    height: 462px;
+    object-fit: cover;
+    transition: .3s;
+    border-radius: 30px;
+}
+
+.vl-tab-heading-content{
+    & .vl-tab-heading-flx{
+        display: flex;
+        align-items: center;
+        & .icon{
+            & span{
+                & img{
+                    margin-right: 20px;
+                }
+            }
+        }
+        & .vl-heading{
+            & .title{
+                color: var(--vkl-text-text-2);
+                font-size: var(--vkl-font-size-font-s20);
+                line-height: var(--vkl-specing-height24);
+                font-weight: var(--vkl-weight-bold);
+                transition: .3s;
+                @media #{$xs}{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    & .vl-heading-desc{
+        & p{
+            padding-top: 16px;
+            transform: translateY(10px);
+            transition: .3s;
+            @media #{$xs}{
+                padding-top: 14px;
+                transform: translateY(30px);
+            }
+        }
+    }
+}
+
+.vl-tab-box-ac .nav-link{
+    background: var(--vkl-bg-bg-2);
+    border-radius: 30px;
+    padding: 28px 24px;
+    height: 116px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: .3s;
+    @media #{$xs}{
+        padding: 15px;
+      }
+    &.active {
+        background: var(--vkl-bg-bg-2);
+        padding: 28px 24px;
+        border-radius: 30px;
+        height: 184px;
+        transition: .3s;
+        @media #{$xs}{
+            padding: 15px;
+          }
+        & .vl-heading-desc{
+            & p{
+                transform: translateY(0px);
+                transition: .3s;
+            }
+        }
+    }
+    
+}
+
+

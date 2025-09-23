@@ -1,0 +1,154 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.11 Gallery css
+/*----------------------------------------*/
+
+.vl-gallery-thumb{
+    &-sm{
+        & img{
+            height: 240px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+        &-2{
+            width: 396px;
+            left: -90px;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            @media #{$md}{
+                left: -55px;
+            }
+            @media #{$xs}{
+                left: 0px;
+                width: 100%;
+            }
+            @media #{$xl}{
+                width:343px;
+                left: -82px;
+            }
+            & img{
+                height: 240px;
+                object-fit: cover;
+                border-radius: 20px;
+            }
+        }
+    }
+    &-large{
+        & img{
+            height: 510px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+    }
+    &  img {
+        height: 510px;
+    }
+}
+
+.gallery-shape{
+    position: absolute;
+    right: 0;
+    bottom: 60px;
+    z-index: -1;
+}
+
+// gallery style 7
+
+.vl-gallery-box-grid-7{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:30px;
+    @media #{$xs}{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.vl-single-gallery-7{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: .3s;
+    & .vl-gallery-thumb-7{
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        border-radius: 16px;
+        transition: .3s;
+        & img{
+            height: 240px;
+            border-radius: 16px;
+            transition: .3s;
+            object-fit: cover;
+        }
+        &::after{
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 0%;
+            transition: .3s;
+            background: linear-gradient(0deg, rgba(17, 0, 0, 0.50) 0%, rgba(17, 0, 0, 0.50) 100%);
+        }
+    }
+    & .vl-searh-icon{
+        & span{
+            background: var(--vkl-text-text-21);
+            height: 70px;
+            width: 70px;
+            line-height: 70px;
+            text-align: center;
+            border-radius: 50px;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: 0;
+            z-index: 1;
+            transform: translateY(-50%);
+            transition: 0.3s;
+            opacity: 0;
+            visibility: hidden;
+        }
+        & .search-icon-gallery{
+            width: 30px;
+            height: 30px;
+            transition: .3s;
+        }
+    }
+    &:hover{
+        & .vl-gallery-thumb-7{
+            & img{
+                transform: scale(1.1);
+                transition: .3s;
+            }
+            &:hover{
+                &::after{
+                    width: 100%;
+                }
+            }
+        }
+        & .vl-searh-icon{
+            & span{
+                top: 50%;
+                opacity: 1;
+                visibility: visible;
+                transition: .3s;
+            }
+            
+        }
+    }
+}
+
+
+// gallery large thumb 
+
+.vl-gallery-large-thumb-7 .large-thumb img {
+    height: 704px;
+    width: 615px;
+    margin-top: -194px;
+    float: right;
+}

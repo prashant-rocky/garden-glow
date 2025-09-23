@@ -1,0 +1,203 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.14 Cart css 
+/*----------------------------------------*/
+
+.vl-single-cart-box{
+    background: var(--vkl-bg-bg-2);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: .3s;
+    & .vl-thumb{
+        height: 210px;
+        overflow: hidden;
+        & img{
+            height: 210px;
+            overflow: hidden;
+            transition: .3s;
+        }
+    }
+    & .vl-cart-para{
+        padding: 32px;
+        text-align: center;
+        & .subtitle{
+            color: var(--vkl-text-text-3);
+            font-size: var(--vkl-font-size-font-s18);
+            line-height: var(--vkl-specing-height18);
+            font-weight: var(--vkl-weight-semibold);
+            transition: .3;
+            &:hover{
+                color: var(--vkl-text-text-1);
+                transition: .3s;
+            }
+        }
+        & .title{
+            color: var(--vkl-text-text-2);
+            font-size: var(--vkl-font-size-font-s20);
+            line-height: var(--vkl-specing-height20);
+            font-weight: var(--vkl-weight-bold);
+            transition: .3;
+            &:hover{
+                color: var(--vkl-text-text-1);
+                transition: .3s;
+            }
+        }
+        & .numb{
+            color: var(--vkl-text-text-2);
+            font-size: var(--vkl-font-size-font-s24);
+            line-height: var(--vkl-specing-height24);
+            font-weight: var(--vkl-weight-bold);
+        }
+        & .vl-cart-btn{
+            & .vl-primary-btn-4{
+                border: 1px solid var(--vkl-text-text-2);
+                background: transparent;
+                color: var(--vkl-text-text-2);
+                & span{
+                    background: var(--vkl-text-text-2);
+                    color: var(--vkl-text-text-white);
+                }
+            }
+            &:hover{
+                & .vl-primary-btn-4{
+                    border: 1px solid var(--vkl-text-text-1);
+                    transition: .3s;
+                    color: var(--vkl-text-text-white);
+                    &::after{
+                        background: var(--vkl-text-text-1);
+                    }
+                    & span{
+                       background: var(--vkl-text-text-white);
+                        color: var(--vkl-text-text-1);
+                    }
+                }
+                
+            }
+        }
+    }
+    &:hover{
+        background: var(--vkl-text-text-white);
+        box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.08);
+        transition: .3s;
+        & .vl-thumb{
+            & img{
+                transform: scale(1.1);
+                transition: .3s;
+            }
+        }
+    }
+}
+
+// cart table header
+.table{
+    & thead{
+        & tr{
+            background: var(--vkl-bg-bg-2);
+        }
+        
+    }
+}
+
+.vl-quantity{
+    width: 109px;
+    & input[type=text]{
+        border: transparent;
+        background: var(--vkl-bg-bg-2);
+        text-align: center;
+        height: 52px;
+        border-radius: 8px;
+        font-size: var(--vkl-font-size-font-s16);
+        line-height: var(--vkl-specing-height24);
+        color: var(--vkl-text-text-2);
+        font-weight: var(--vkl-weight-medium);
+    }
+}
+
+.qty_botton{
+    &.vl-cart-minus {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 16px;
+        cursor: pointer;
+    }
+    &.vl-cart-plus {
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+    }
+}
+
+.qty_button{
+    &.cart-plus.vl-cart-plus {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.table>tbody{
+    vertical-align: middle !important;
+}
+
+// price
+.product-price{
+    & .amount{
+        background: var(--vkl-text-text-1);
+        color: var(--vkl-text-text-white);
+        padding: 12px 14px;
+        border-radius: 8px;
+        display: inline-block;
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height18);
+        font-weight: var(--vkl-weight-bold);
+    }
+}
+
+.product-subtotal{
+    & .amount{
+        background: var(--vkl-text-text-1);
+        color: var(--vkl-text-text-white);
+        padding: 12px 14px;
+        border-radius: 8px;
+        display: inline-block;
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height18);
+        font-weight: var(--vkl-weight-bold);
+    }
+}
+
+// total price
+
+.cart-page-total{
+    border-radius: 20px;
+    padding: 24px;
+    & .title{
+        color: var(--vkl-text-text-2);
+        font-size: var(--vkl-font-size-font-s28);
+        line-height: var(--vkl-specing-height25);
+        font-weight: var(--vkl-weight-semibold);
+    }
+    & ul{
+        & li{
+            color: var(--vkl-text-text-2);
+            font-size: var(--vkl-font-size-font-s18);
+            line-height: var(--vkl-specing-height18);
+            font-weight: var(--vkl-weight-semibold);
+            margin-bottom: 17px;
+            padding-bottom: 17px;
+            border-bottom: 1px solid #DEDEDE;
+            &:last-child{
+                margin: 0;
+                padding: 0;
+                border: inherit;
+            }
+            & span{
+                float: right;
+            }
+        }
+    }
+}

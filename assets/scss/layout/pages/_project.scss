@@ -1,0 +1,149 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.19 project
+/*----------------------------------------*/
+
+
+.vl-project-wrp-10{
+    background: var(--vkl-text-text-24);
+}
+
+.vl-project-wrap-btn{
+    text-align:end;
+    @media #{$lg,$md,$xs}{
+        text-align: start;
+    }
+}
+
+.vl-single-project10{
+    transition: .3s;
+    &-thumb{
+        height: 320px;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: .3s;
+        position:relative;
+        & img{
+            transition: .3s;
+        }
+        &-icon{
+            & span{
+                background: var(--vkl-text-text-1);
+                height: 56px;
+                width:56px;
+                line-height: 56px;
+                border-radius: 50px;
+                text-align: center;
+                display: inline-block;
+                color: var(--vkl-text-text-white);
+                transform: rotate(-45deg);
+                transition: .3s;
+                font-size: 20px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                top: -20px;
+                opacity: 0;
+                visibility: hidden;
+
+            }
+        }
+        &-content{
+            background: var(--vkl-text-text-white);
+            border-radius: 8px;
+            padding: 20px 16px;
+            position: absolute;
+            bottom: -80px;
+            left: 10px;
+            right: 10px;
+            opacity: 0;
+            & p{
+                color: var(--vkl-text-text-24);
+                font-size: var(--vkl-font-size-font-s18);
+                line-height: var(--vkl-specing-height18);
+                transition: .3s;
+                font-weight: var(--vkl-weight-medium);
+            }
+            & .title{
+                padding-top: 16px;
+                color: var(--vkl-text-text-24);
+                font-size: var(--vkl-font-size-font-s20);
+                line-height: var(--vkl-specing-20);
+                transition: .3s;
+                font-weight: var(--vkl-weight-bold);
+                transition: .3s;
+                &:hover{
+                    color: var(--vkl-text-text-1);
+                    transition: .3s;
+                }
+            }
+        }
+    }
+    &:hover{
+        .vl-single-project10{
+            transition: .3s;
+            &-thumb{
+                & img{
+                    transform: scale(1.1);
+                    transition: .3s;
+                }
+                &-icon{
+                    & span{
+                        transition: .3s;
+                        top: 79px;
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+                &-content{
+                    bottom: 10px;
+                    transition: .3s;
+                    opacity: 1;
+                }
+            }
+            
+        }
+    }
+}
+
+
+.portlio-filter{
+    & li{
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height18);
+        font-weight: var(--vkl-weight-ex-bold);
+        color: var(--vkl-text-text-white);
+        transition: .3s;
+        padding: 14px 20px;
+        border: 1px solid var(--vkl-text-text-white);
+        display: inline-block;
+        border-radius: 8px;
+        margin-right: 14px;
+    }
+}
+
+
+// project menu
+
+.project-list .nav-link {
+    border: 1px solid #fff;
+    margin: 0;
+    display: inline-block;
+    margin-right: 16px;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 14px 20px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 800;
+    @media #{$xs}{
+        margin-bottom: 10px;
+    }
+}
+
+.project-list .nav-pills .nav-link.active {
+   background: var(--vkl-text-text-1);
+   border: 1px solid var(--vkl-text-text-1);
+}

@@ -1,0 +1,140 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/* 2.12 Counter
+/*----------------------------------------*/
+
+// counter block home 3
+
+.vl-counter-bloc3k{
+    padding: 60px;
+    @media #{$xs}{
+        padding: 30px;
+    }
+    & .vl-con-item-grid{
+        & .vl-single-counter-box{
+            display: inline-block;
+            margin-right: 40px;
+            padding-right: 40px;
+            position: relative;
+            z-index: 1;
+            @media #{$xxl}{
+                margin-right: 30px;
+                padding-right: 30px;
+            }
+
+            @media #{$xl}{
+                margin-right: 20px;
+                padding-right: 20px;
+            }
+            @media #{$md}{
+                margin-right: 33px;
+                padding-right: 33px;
+            }
+            @media #{$xs}{
+                margin-right: 0px;
+                padding-right: 0px;
+                display: block;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            & span{
+                font-size: var(--vkl-font-size-font-s40);
+                line-height: var(--vkl-specing-height40);
+                font-weight: var(--vkl-weight-bold);
+            }
+            &::after{
+                position: absolute;
+                content: "";
+                right: 0;
+                top: 0;
+                height: 89px;
+                width: 1px;
+                background: var(--vkl-bg-bg-2);
+                @media #{$xs}{
+                    display: none;
+                }
+            }
+            &:last-child{
+                &::after{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+// counter home 4
+.vl-cconter-box{
+    & .vl-single-conter{
+        display: inline-block;
+        padding-right: 50px;
+        & .title{
+            color: var(--vkl-text-text-2);
+            font-size: var(--vkl-font-size-font-s40);
+            line-height: var(--vkl-specing-height40);
+            font-weight: var(--vkl-weight-bold);
+        }
+    }
+}
+
+// counter style home 6
+
+.vl-counter-box-wrap6{
+    background: var(--vkl-text-text-12);
+    border-radius: 16px;
+    padding: 32px 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: -156px;
+    @media #{$lg,$md,$xs}{
+        margin-top: 30px;
+    }
+    @media #{$xs}{
+        grid-template-columns: 1fr 1fr;
+        padding:15px;
+        gap: 5px;
+    }
+    & .vl-single-counter-box6{
+        & .title{
+            color: var(--vkl-text-text-16);
+            font-size: var(--vkl-font-size-font-s44);
+            line-height: var(--vkl-specing-height44);
+            font-weight: var(--vkl-weight-regular);
+        }
+        & .counter-desc{
+            color: var(--vkl-text-text-16);
+            font-size: var(--vkl-font-size-font-s18);
+            line-height: var(--vkl-specing-height26);
+            font-weight: var(--vkl-weight-medium);
+            padding-top: 18px;
+            display: inline-block;
+        }
+    }
+}
+
+// counter style 7
+.vl-counter-box-seven-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    @media #{$md,$xs}{
+        grid-template-columns: repeat(2,1fr);   
+    }
+}
+.vl-single-counter-box{
+    &-7{
+        & .title{
+            font-size: var(--vkl-font-size-font-s44);
+            line-height: var(--vkl-specing-height44);
+            font-weight: var(--vkl-weight-bold);
+            color: var(--vkl-text-text-7);
+        }
+        & .desegnition{
+            font-size: var(--vkl-font-size-font-s20);
+            line-height: var(--vkl-specing-height20);
+            font-weight: var(--vkl-weight-medium);
+            color: var(--vkl-text-text-20);
+        }
+    }
+}

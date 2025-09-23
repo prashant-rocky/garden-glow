@@ -1,0 +1,413 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.16 Work css 
+/*----------------------------------------*/
+
+.vl-work-area-6{  
+    background: var(--vkl-bg-bg-3);
+}
+
+
+// work icon box 6
+
+.vl-work-single-box6{
+        border-radius: 8px;
+        border: 1px solid rgba(22, 26, 18, 0.10);
+        display: flex;
+        padding: 32px 24px;
+        overflow: hidden;
+        transition: .3s;
+        position: relative;
+        z-index: 1;
+
+        @media #{$lg,$md,$xs}{
+            display: block;
+        }
+        &-icon{
+            position: relative;
+            z-index: 1;
+            & span{
+                background: var(--vkl-bg-bg-4);
+                height: 70px;
+                width: 70px;
+                line-height: 70px;
+                display: inline-block;
+                border-radius: 50px;
+                text-align: center;
+                margin-right: 24px;
+                position: relative;
+                z-index: 1;
+                transition: .3s;
+            }
+            & .vl-number{
+                    background: var(--vkl-text-text-8);
+                    color: var(--vkl-text-text-7);
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 50px;
+                    display: inline-block;
+                    font-size: var(--vkl-font-size-font-s18);
+                    line-height: var(--vkl-specing-height18);
+                    font-weight: normal;
+                    position: absolute;
+                    left: 42px;
+                    z-index: 1;
+                    top:-7px;
+                    font-style: normal;
+                    text-align: center;
+                    line-height: 33px;
+                    transition: .3s;
+            }
+            & .dotted-shape {
+                position: absolute;
+                top: -5px;
+                left: -5px;
+                transition: .3s;
+            }
+        }
+        &-content{
+            @media #{$lg,$md,$xs}{
+                margin-top: 20px;
+            }
+            & .title{
+                font-size: var(--vkl-font-size-font-s28);
+                line-height: var(--vkl-specing-height28);
+                font-weight: var(--vkl-weight-bold);
+                color: var(--vkl-text-text-7);
+                transition: .3s;
+            }
+            & p{
+                font-size: var(--vkl-font-size-font-s18);
+                line-height: var(--vkl-specing-height26);
+                font-weight: var(--vkl-weight-medium);
+                color: var(--vkl-text-text-9);
+                transition: .3s;
+            }
+        }
+        &::after{
+            position: absolute;
+            content: "";
+            left: -50px;
+            top: -50px;
+            height: 130px;
+            width: 130px;
+            background: #D6F0C7;
+            border: 3px solid var(--vkl-text-text-8);
+            border-radius: 50%;
+            transition: .3s;
+        }
+        &:hover{
+            background: var(--vkl-bg-bg-5);
+            transition: .3s;
+            & .vl-work-single-box6-icon span{
+                    background: var(--vkl-text-text-8);
+                    transition: .3s;
+            }
+            & .vl-work-single-box6-icon .vl-number{
+                background: var(--vkl-bg-bg-4);
+                color: var(--vkl-text-text-white);
+                transition: .3s;
+            }
+            & .vl-work-single-box6-icon .dotted-shape{
+                display: none;
+                transition: .3s;
+            }
+            &::after{
+                background: var(--vkl-bg-bg-4);
+                transition: .3s;
+            }
+        }
+}
+
+
+.vl-work-area-6{
+    position: relative;
+    z-index: 1;
+}
+
+.vl-wrk-thumb-bottom {
+    position: absolute;
+    @media #{$lg,$xs}{
+        position: relative;
+    }
+    @media #{$md,$xs}{
+        position: relative;
+        margin-bottom: -40px;
+    }
+}
+
+// work style home 6
+
+.vl-work-process-box6{
+    text-align: center;
+    transition: 0.3s;
+    & .icon{
+        position: relative;
+        z-index: 1;
+        height: 70px;
+        width: 70px;
+        margin: 0 auto;
+        text-align: center;
+        & span{
+            height: 70px;
+            width: 70px;
+            line-height: 70px;
+            text-align: center;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.10);
+            display:inline-block;
+            transition: .3s;
+        }
+        & .doted-shape {
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            & img{
+                transition: .3s;
+                opacity: .3;
+            }
+        }
+        & .vl-circle-top-number{
+            position: absolute;
+            top: -15px;
+            right: -10px;
+            & span{
+                height: 30px;
+                width: 30px;
+                line-height: 30px;
+                border-radius: 50px;
+                display: inline-block;
+                background: var(--vkl-text-text-12);
+                font-size: var(--vkl-font-size-font-s18);
+                font-weight: var(--vkl-weight-semibold);
+                color: var(--vkl-text-text-16);
+                transition: .3s;
+            }
+        }
+    }
+    & .vl-work-process-content{
+        & .title{
+            color: var(--vkl-text-text-12);
+        }
+        & p{
+            color: rgba(175, 183, 159, 0.90);
+        }
+    }
+    &:hover{
+        & .icon span{
+            background: var(--vkl-text-text-12);
+            transition: .3s;
+        }
+        & .icon .doted-shape img{
+            opacity: 1;
+            transition: .3s;
+        }
+        .icon .vl-circle-top-number span{
+            background: var(--vkl-text-text-white);
+            transition: .3s;
+        }
+    }
+}
+
+
+ 
+// work process style 6
+
+.vlaward {
+    border-bottom: 1px solid #2C341B;
+    padding: 38px 0;
+    @media #{$xs} {
+        border-bottom: 0;
+    }
+}
+.vlaward-wrapper .row [class*=col-]:nth-child(1) .vlaward {
+    padding-top: 0;
+}
+.vlaward-wrapper .row [class*=col-]:nth-child(2) .vlaward {
+    padding-top: 0;
+}
+.vlaward-wrapper .row [class*=col-]:nth-child(even) .vlaward {
+    padding-left: 55px;
+    border-left: 1px solid #2C341B;
+    @media #{$xs} {
+        padding-left: 0;
+        border-left: 0;
+    }
+}
+.vlaward-wrapper .row [class*=col-]:nth-last-child(-n+2) .vlaward {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.vl-center-site-logo{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+// work style 7
+
+.vl-work-box-grid-7{
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(4 ,1fr);
+    gap: 0px 30px;
+    @media #{$md,$xs}{
+        grid-template-columns: repeat(2 ,1fr);
+    }
+    @media #{$xs}{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+.vl-single-work-box{
+    text-align: center;
+    transition: .3s;
+    position: relative;
+    z-index: 1;
+    &:nth-child(odd) {
+        margin-top: 100px;
+        @media #{$lg,$md,$xs}{
+            margin-top: 0;
+        }
+    }   
+    & .icon{
+        display: inline-block;
+        position: relative;
+        & span{
+            background: var(--vkl-bg-bg-11);
+            height: 70px;
+            width: 70px;
+            line-height: 70px;
+            text-align: center;
+            border-radius: 50px;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            transition: .3s;
+            &::after{
+                position: absolute;
+                content: "";
+                left: 38px;
+                top: 32px;
+                height: 100%;
+                width: 100%;
+                background: var(--vkl-text-text-21);
+                transition: 0.3s;
+                z-index: -1;
+                border-radius: 50px;
+            }
+        }
+        & .dot-shap {
+            position: absolute;
+            left: -5px;
+            top: -5px;
+        }
+    }
+    & .content{
+        & .title{
+            color: var(--vkl-text-text-white);
+            font-size: var(--vkl-font-size-font-s24);
+            line-height: var(--vkl-specing-height24);
+            font-weight: var(--vkl-weight-bold);
+            transition: .3s;
+            &:hover{
+                color: var(--vkl-text-text-21);
+                transition: .3s;
+            }
+        }
+        & p{
+            color: rgba(255, 255, 255, 0.90);
+            font-size: var(--vkl-font-size-font-s18);
+            line-height: var(--vkl-specing-height26);
+            font-weight: var(--vkl-weight-medium);
+            transition: .3s;
+        }
+    }
+    &:hover{
+        & .icon span::after {
+            left: 0;
+            top: 0;
+        }
+    }
+}
+
+
+.vl-line-shape7 span img {
+    position: absolute;
+    left: 178px;
+    right: 0;
+    top: 15px;
+    width: 74%;
+}
+
+// work style home 8.2
+
+.vl-wrpoecss-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 250px;
+    @media #{$lg}{
+        gap: 50px;
+    }
+    @media #{$md}{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    @media #{$xs}{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+}
+
+.vl-wrk-single-box{
+    text-align: center;
+    transition: .3s;
+    position: relative;
+    z-index: 1;
+    & .vl-num{
+        & span{
+            background: var(--vkl-text-text-8);
+            height: 48px;
+            width: 48px;
+            display: inline-block;
+            border-radius: 50px;
+            line-height: 48px;
+            color: var(--vkl-text-text-19);
+            font-size: var(--vkl-font-size-font-s24);
+            transition: .3s;
+        }
+    }
+    & .vl-wrk-content{
+        & .title{
+            color: var(--vkl-text-text-19);
+            font-size: var(--vkl-font-size-font-s24);
+            line-height: var(--vkl-specing-height24);
+            transition: .3s;
+            font-weight: var(--vkl-weight-bold);
+        }
+        & p{
+            color: var(--vkl-text-text-9);
+            font-size: var(--vkl-font-size-font-s18);
+            line-height: var(--vkl-specing-height26);
+            transition: .3s;
+            font-weight: var(--vkl-weight-medium);
+        }
+    }
+    &:hover{
+        & .vl-num{
+            & span{
+                background: var(--vkl-text-text-21);
+                transition: .3s;
+            }
+        }
+    }
+}
+
+

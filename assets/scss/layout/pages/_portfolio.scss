@@ -1,0 +1,323 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.10 Profile css
+/*----------------------------------------*/
+.vl-working-area{
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+    border-radius: 20px;
+    & .vl-work-thumb{
+        height: 420px;
+        border-radius: 20px;
+        transition: .3s; 
+        overflow: hidden;
+        & img{
+            height: 420px;
+            object-fit: cover;
+            border-radius: 20px;
+            transition: .3s;
+        }
+        &::after{
+            position: absolute;
+            content: "";
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: rgba(16, 17, 16, 0.70);
+            z-index: 1;
+            transform: scale(.5);
+            transition: .3s;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    & .vl-work-arow{
+        & span{
+            display: inline-block;
+            height: 56px;
+            width: 56px;
+            line-height: 56px;
+            text-align: center;
+            border-radius: 50px;
+            background: var(--vkl-text-text-1);
+            color: var(--vkl-text-text-white);
+            font-size: 20px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            text-align: center;
+            top: 0%;
+            transform: translateY(-50%) rotate(-45deg);
+            opacity: 0;
+            visibility: hidden;
+            transition: .3s;
+            z-index: 1;
+        }
+    }
+    & .vl-work-content-block{
+        background: var(--vkl-text-text-white);
+        border-radius: 20px;
+        padding: 28px 24px;
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: -120px;
+        transition: .3s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 2;
+        & .subtitle{
+            color: rgba(16, 17, 16, 0.90);
+            line-height: var(--vkl-specing-height18);
+            font-weight: var(--vkl-weight-medium);
+        }
+        & .title{
+            font-size: var(--vkl-font-size-font-s20);
+            line-height: var(--vkl-specing-height20);
+            font-weight: var(--vkl-weight-bold);
+            transition: .3s;
+            &:hover{
+                color: var(--vkl-text-text-1);
+                transition: .3s;
+            }
+        }
+    }
+    
+    &:hover{
+        background: rgba(16, 17, 16, 0.70);
+        & .vl-work-arow{
+            & span{
+                top: 34%;
+                opacity: 1;
+                visibility: visible;
+                transition: .3s;
+            }
+        }
+        & .vl-work-content-block{
+            bottom: 20px;
+            transition: .3s;
+            opacity: 1;
+            visibility: visible;
+        }
+        & .vl-work-thumb{
+            & img{
+                transform: scale(1.1);
+                transition: .3s;
+            }
+            &::after{
+                transform: scale(1);
+                opacity: 1;
+                visibility: visible;
+                transition: .5s;
+            }
+        }
+    }
+}
+
+.vl-work-active{
+    & .swiper-slide{
+        background: transparent;
+        &::after{
+            background: transparent;
+        }
+    }
+}
+
+// .swiper.vl-work-active{
+//     position: absolute;
+// }
+
+// .vl-work-area{
+//     height: 907px;
+// }
+.work-top-shape{
+    position: absolute;
+}
+
+
+
+// dot
+.vl-work-area{
+    // .swiper-pagination{
+    //     position: relative;
+    // }
+    .swiper-pagination-bullet {
+        background: #BCE3C0;
+        opacity: 1;
+        height: 12px !important;
+        width: 12px !important;
+        transform: inherit;
+    }
+      
+    .swiper-pagination-bullet-active {
+        background: var(--vkl-text-text-1);
+        position: relative;
+        &::after{
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            border: 1px solid var(--vkl-text-text-1);
+            left: -3px;
+            top: -3px;
+            border-radius: 50px;
+        }
+    }
+    .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+        position: relative;
+        height: 12px !important;
+        width: 12px !important;
+        margin-top: 50px;
+        border-radius: 50px !important;
+    }
+}
+
+.swiper-pagination.custom-dots{
+    .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+        transform: scale(inherit);
+        position: relative;
+    }
+}
+
+.swiper-pagination.custom-dots.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal.swiper-pagination-bullets-dynamic {
+    left: 0;
+    transform: inherit;
+    margin: 0 auto;
+    right: 0;
+    position: relative;
+}
+
+
+// porfolio work box
+
+.vl-process-box{
+    position: relative;
+    z-index: 1;
+    &-icon{
+        position: relative;
+        z-index: 1;
+        & span{
+            background: var(--vkl-text-text-white);
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+            border-radius: 20px;
+            line-height: 100px;
+            transition: .3s;
+            position: relative;
+            z-index: 1;
+        }
+        &::after{
+            position: absolute;
+            content: "";
+            left: 0;
+            height: 120px;
+            width: 120px;
+            border-radius: 20px;
+            border: 3px solid var(--vkl-text-text-white);
+            right: 0;
+            margin: 0 auto;
+            top: -9px;
+        }
+    }
+    &-content{
+        & .title{
+            font-size: var(--vkl-font-size-font-s20);
+            line-height: var(--vkl-specing-height20);
+            font-weight: var(--vkl-weight-bold);
+            transition: .3s;
+            @media #{$xl}{
+                line-height: var(--vkl-specing-height28);
+                font-size: 18px;
+            }
+            &:hover{
+                color: var(--vkl-text-text-1);
+                transition: .3s;
+            }
+        }
+    }
+    & .vl-num span {
+        background: var(--vkl-text-text-2);
+        height: 40px;
+        width: 40px;
+        display: inline-block;
+        line-height: 40px;
+        border-radius: 50px;
+        font-size: 18px;
+        color: var(--vkl-text-text-white);
+        position: absolute;
+        top: 0;
+        right: 78px;
+        z-index: 1;
+        transition: .3s;
+        font-weight: var(--vkl-weight-semibold);
+        @media #{$xs}{
+            right: 88px;
+        }
+    }
+    & .vl-right-shape {
+        position: absolute;
+        right: -60px;
+        top: 50%;
+        transform: translateY(-50%);
+        & img{
+            filter: brightness(0.7);
+            opacity: .3;
+            transition: .3s;
+        }
+    }
+    &:hover{
+        & span{
+           transform: rotateY(-180deg);
+        }
+        & .vl-right-shape {
+            & img{
+                filter: brightness(1);
+                opacity: 1;
+                transition: .3s;
+            }
+        }
+        & .vl-num span{
+            background: var(--vkl-text-text-1);
+            transition: .3s;
+        }
+    }
+}
+
+
+// work home 3
+
+.vl-work-area-bg{
+    padding: 50px 32px;
+    @media #{$xs}{
+        padding: 20px;
+    }
+}
+
+.vl-process-thumb-area{
+    & img{
+        height: 640px;
+        object-fit: cover;
+        border-radius: 30px;
+        @media #{$md,$xs}{
+            height: 100%;
+        }  
+    }
+}
+
+
+
+/*----------------------------------------*/
+/*  single iner page css
+/*----------------------------------------*/
+.vl-pro-thumb-sm{
+    & img{
+        border-radius: 20px;
+        height: 270px;
+        object-fit: cover;
+    }
+}

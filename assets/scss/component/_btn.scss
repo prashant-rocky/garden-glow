@@ -1,0 +1,731 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.2 Buttons
+/*----------------------------------------*/
+
+.vl-btn{
+    background: var(--vkl-text-text-1);
+    padding: 16px 45px;
+    font-size: 18px;
+    border-radius: 8px;
+    display: inline-block;
+    color: var(--vkl-text-text-white);
+    position: relative;
+    overflow: hidden; 
+    &:hover{
+        & .vl-btn-y-1{
+            transform: translateY(-100%);
+        }
+        & .vl-btn-y-2{
+            transform: translateY(0);
+        }
+        color: var(--vkl-text-text-white);
+    }
+    &-sec{ 
+        background: var(--vkl-text-text-1);
+        padding: 16px 24px;
+        font-size: 18px;
+        border-radius: 8px;
+        display: inline-block;
+        position: relative;
+        &:hover{
+            & .vl-btn-y-1{
+                transform: translateY(-100%);
+            }
+            & .vl-btn-y-2{
+                transform: translateY(0);
+            }
+        }
+    }
+        &:hover{
+            background: var(--vl-theme-color);
+            color: var(--vkl-text-text-white);
+            border-color: var(--vl-theme-color);
+            opacity: 1;
+        }
+
+    &-wrap{
+        position: relative;
+        overflow: hidden;
+        display: block;
+        color: var(--vkl-text-text-white);
+        font-weight: var(--vkl-weight-ex-bold);
+        text-transform: uppercase;
+        & span{
+            transition: .3s;
+            display: block;
+        }
+    }
+   
+    &-y-2{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        transform: translateY(100%);
+    }
+
+}
+
+// primary btn
+.vl-primary-btn{
+    display: inline-block;
+    & .text{
+        background: var(--vkl-text-text-1);
+        color: var(--vkl-text-text-white);
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height18);
+        font-weight: var(--vkl-weight-ex-bold);
+        padding: 18px 24px;
+        display: inline-block;
+        margin-right: -5px;
+        transition: .3s;
+    }
+    & .arrow{
+        background: var(--vkl-text-text-1);
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        text-align: center;
+        border-radius: 50%;
+        display: inline-block;
+        color: var(--vkl-text-text-white);
+        font-size: 20px;
+        transform: rotate(-45deg);
+        transition: .3s;
+    }
+    &:hover{
+        & .text{
+            margin-right: 0;
+            transition: .3s;
+            background: var(--vkl-text-text-2);
+        }
+        & .arrow{
+            background: var(--vkl-text-text-2);
+            transform: rotate(0);
+            transition: .3s;
+        }
+    }
+
+    &-7{
+        & .text{
+            color: var(--vkl-text-text-19);
+            background: var(--vkl-text-text-21);
+            transition: .3s;
+        }
+        & .arrow{
+            color: var(--vkl-text-text-19);
+            background: var(--vkl-text-text-21);
+            transition: .3s;
+        }
+        &:hover{
+            & .text{
+                margin-right: 0;
+                transition: .3s;
+                background: var(--vkl-text-text-19);
+                color: var(--vkl-text-text-white);
+            }
+            & .arrow{
+                background: var(--vkl-text-text-19);
+                transform: rotate(0);
+                transition: .3s;
+                color: var(--vkl-text-text-white);
+            }
+        }
+    }
+}
+
+.vl-footer-newslaterbtn {
+   @media #{$xs}{
+    text-align: center;
+    margin-top: 20px;
+   }
+}
+
+// home 2 
+.vl-primary-btn-2{
+    padding: 18px 24px;
+    background: var(--vkl-text-text-1);
+    display: inline-block;
+    letter-spacing: 0px;
+    color: var(--vkl-text-text-white);
+    font-size: var(--vkl-font-size-font-s18);
+    line-height: var(--vkl-specing-height18);
+    font-weight: var(--vkl-weight-ex-bold);
+    position: relative;
+    transition: all 0.3s linear;
+    overflow: hidden;
+    z-index: 1;
+    line-height: 1;
+    flex: 0 0 auto;
+    &::after{
+        position: absolute;
+        content: "";
+        background:var(--vkl-text-text-2);
+        color: var(--vkl-text-text-white);
+        width: 100%;
+        height: 0%;
+        left: 50%;
+        top: 50%;
+        border-radius: 0px;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        z-index: -1;
+        transition: all 500ms ease;
+    }
+    &:hover{
+        color: var(--vkl-text-text-white);
+        &::after {
+            height: 450%;
+        }
+    }
+}
+
+
+// contact btn home 2 
+
+.vl-contact-btn{
+    .vl-primary-btn-2:hover::after {
+        height: 700%;
+    }
+}
+
+// cta btn home 2 
+.vl-cta-btn{
+    .vl-primary-btn-2:hover::after{
+        height: 400%;
+    }
+}
+
+
+// home 3
+.vl-primary-btn-3{
+    padding: 18px 24px;
+    background: var(--vkl-text-text-1);
+    display: inline-block;
+    letter-spacing: 0px;
+    color: var(--vkl-text-text-white);
+    font-size: var(--vkl-font-size-font-s18);
+    line-height: var(--vkl-specing-height18);
+    font-weight: var(--vkl-weight-ex-bold);
+    position: relative;
+    transition: all 0.3s linear;
+    //overflow: hidden;
+    z-index: 1;
+    & span{
+        display: inline-block;
+        transform: rotate(-45deg);
+        transition: .3s;
+    }
+    &::after{
+        position: absolute;
+        content: "";
+        background: #3AAA47;
+        height: 36px;
+        width: 36px;
+        line-height: 36px;
+        border-radius: 50px;
+        left: 11px;
+        top: 8px;
+        z-index: -1;
+        transition: .3s;
+    }
+    &:hover{
+        color: var(--vkl-text-text-white);
+        transition: .3s;
+        & span{
+            transition: .3s;
+            transform: rotate(0);
+        }
+       &::after{
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+       }
+    }
+}
+
+.header-sticky .vl-primary-btn-2::after {
+    background: #fff;
+}
+.header-sticky .vl-primary-btn-2:hover {
+    color: var(--vkl-text-text-1);
+}
+
+// banner btn home 3
+.vl-bner-btn-flx{
+    & .vl-primary-btn-3{
+        background: var(--vkl-text-text-white);
+        color: var(--vkl-text-text-2);
+        &::after{
+            position: absolute;
+            content: "";
+            background:#E7E7E7;
+            height: 36px;
+            width: 36px;
+            line-height: 36px;
+            border-radius: 50px;
+            left: 11px;
+            top: 8px;
+            z-index: -1;
+            transition: 0.3s;
+        }
+        &:hover{
+            &::after{
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+            }
+        }
+        &.second-btn{
+            background: transparent;
+            border: 1px solid var(--vkl-text-text-white);
+            padding: 16px 24px;
+            color: var(--vkl-text-text-white);
+            &::after{
+                position: absolute;
+                content: "";
+                background:#3AAA47;
+                height: 36px;
+                width: 36px;
+                line-height: 36px;
+                border-radius: 50px;
+                left: 11px;
+                top: 8px;
+                z-index: -1;
+                transition: 0.3s;
+            }
+            &:hover{
+                &::after{
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            @media #{$xs}{
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+.vl-footer-newslaterbtn{
+    & .vl-primary-btn-3{
+        @media #{$xs}{
+            width: 100%;
+        }
+    }
+}
+
+
+
+// home 4
+.vl-primary-btn-4{
+    background: var(--vkl-text-text-1);
+    display: inline-block;
+    letter-spacing: 0px;
+    color: var(--vkl-text-text-white);
+    font-size: var(--vkl-font-size-font-s18);
+    line-height: var(--vkl-specing-height18);
+    font-weight: var(--vkl-weight-ex-bold);
+    position: relative;
+    transition: all 0.3s linear;
+    //overflow: hidden;
+    z-index: 1;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 24px;
+    padding-right: 10px;
+    & span{
+        display: inline-block;
+        transform: rotate(-45deg);
+        transition: 0.3s;
+        background: var(--vkl-text-text-white);
+        height: 32px;
+        width: 32px;
+        color: var(--vkl-text-text-1);
+        text-align: center;
+        border-radius: 50px;
+        line-height: 35px;
+        margin-left: 8px;
+    }
+    &::after{
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: var(--vkl-text-text-2);
+        z-index: -1;
+        transform: scaleX(.0);
+        transition: .3s;
+        border-radius: 8px;
+    }
+    &:hover{
+        &::after{
+            transform: scaleX(1);
+            transition: .3s;
+        }
+        & span{
+            transform: rotate(0);
+            transition: .3s;
+        }
+        color: var(--vkl-text-text-white);
+        transition: .3s;
+    }
+    &.secondrybtn{
+        background: transparent;
+        border: 2px solid var(--vkl-text-text-1);
+        color: var(--vkl-text-text-1);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        @media #{$xs}{
+            margin-top: 15px;
+        }
+        & span{
+            background: var(--vkl-text-text-1);
+            color: var(--vkl-text-text-white);
+        }
+        &::after{
+            background: var(--vkl-text-text-1);
+        }
+        &:hover{
+            color: var(--vkl-text-text-white);
+            & span{
+                background: var(--vkl-text-text-white);
+                color: var(--vkl-text-text-1);
+            }
+        }
+    }
+}
+
+.vl-shoping-us-wrap-btn.text-end {
+    @media #{$md,$xs}{
+        text-align: start !important;
+    }
+    
+}
+
+// Home btn 5
+
+.vl-primary-btn-5{
+    background: var(--vkl-text-text-8);
+    border-radius: 8px;
+    color: var(--vkl-text-text-7);
+    font-size: var(--vkl-font-size-font-s18);
+    line-height: var(--vkl-specing-height18);
+    font-weight: var(--vkl-weight-bold);
+    display: inline-block;
+    padding: 17px 20px;
+    position: relative;
+    z-index: 1;
+    transition: .3s;
+    &::after{
+        position: absolute;
+        content: "";
+        left: 8px;
+        top: 8px;
+        background: #89CD6A;
+        height: 36px;
+        width: 36px;
+        line-height: 36px;
+        border-radius: 50px;
+        z-index: -1;
+        transition: .3s;
+    }
+    &:hover{
+        &::after{
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            border-radius: 8px;
+        }
+    }
+}
+
+.vl-blog-btn5.text-end {
+    @media #{$lg,$md,$xs}{
+        text-align: start !important;
+    }
+}
+
+
+.vl-contact-from-btn5{
+    &.text-end{
+        @media #{$xs}{
+            text-align: start;
+        }
+    }
+    & .vl-primary-btn-5{
+        display: inline-block;
+    }
+}
+
+
+// home btn 6
+.vl-primary-btn-6{
+    background: var(--vkl-text-text-12);
+    font-size: var(--vkl-font-size-font-s18);
+    line-height: var(--vkl-specing-height18);
+    font-weight: var(--vkl-weight-bold);
+    padding: 12px 24px 12px 10px;
+    display: inline-block;
+    border-radius: 50px;
+    transition: .3s;
+    & span{
+        background: var(--vkl-text-text-white);
+        height: 32px;
+        width: 32px;
+        line-height: 32px;
+        text-align: center;
+        border-radius: 50px;
+        display: inline-block !important;
+        margin-right: 10px;
+        transition: .3s;
+    }
+    &:hover{
+        transform: translateY(-2px);
+        & span{
+            transform: rotate(45deg);
+        }
+    }
+}
+
+.vl-thumb-btn{
+    & .vl-primary-btn-6{
+        color: var(--vkl-text-text-16) !important;
+        padding: 12px 24px 12px 10px !important;
+    }
+}
+
+.vl-primary-btn-6.mr-24{
+    margin-right: 24px;
+}
+
+// btn style 8
+
+.vl-thumb-btn{
+    & .btn-primary-8{
+        &::after{
+            @media #{$lg}{
+                left: 90px;
+            }
+            @media #{$md}{
+                left: 90px;
+            }
+            @media #{$xs}{
+                left: 55px;
+            }
+        }
+    }
+}
+
+.btn-primary-8{
+    color: var(--vkl-text-text-19);
+    font-size: var(--vkl-font-size-font-s18) !important;
+    line-height: var(--vkl-specing-height18) !important;
+    font-weight: var(--vkl-weight-bold) !important;
+    transition: .3s;
+    background: var(--vkl-text-text-21);
+    display: inline-block;
+    border-radius: 8px;
+    padding: 17px 20px !important;
+    position: relative;
+    z-index: 1;
+    text-transform: capitalize;
+    &::after{
+        position:absolute;
+        content: "";
+        left: 8px;
+        top: 10px;
+        background: #E5C207;
+        height: 30px;
+        width: 30px;
+        border-radius: 50px;
+        transition: .3s;
+        z-index: -1;
+        
+
+    }
+    &:hover{
+        &::after{
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            border-radius: 8px;
+        }
+    }
+}
+
+// btn style 9
+
+.vl-thumb-btn{
+    & .btn-primary-9{
+        &::after{
+            @media #{$lg,$md}{
+                left: 92px;
+            }
+            @media #{$xs}{
+                left: 54px;
+            }
+        }
+    }
+}
+
+
+.btn-primary-9{
+    color: var(--vkl-text-text-7);
+    font-size: var(--vkl-font-size-font-s18) !important;
+    line-height: var(--vkl-specing-height18);
+    font-weight: var(--vkl-weight-bold) !important;
+    transition: .3s;
+    background: var(--vkl-text-text-21);
+    display: inline-block;
+    border-radius: 50px;
+    padding: 17px 20px !important;
+    position: relative;
+    z-index: 1;
+    text-transform: capitalize;
+    & span{
+        color: var(--vkl-text-text-7);
+        display: inline-block;
+        transform: rotate(-45deg);
+        transition: .3s;
+    }
+    &::after{
+        position:absolute;
+        content: "";
+        left: 8px;
+        top: 10px;
+        background: #E5C207;
+        height: 30px;
+        width: 30px;
+        border-radius: 50px;
+        transition: .3s;
+        z-index: -1;
+    }
+    &:hover{
+        & span{
+            transform: rotate(0);
+            transition: .3s;
+        }
+        &::after{
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            border-radius: 50px;
+        }
+    }
+}
+
+// btn style 10
+
+.btn-primary-10{
+    color: var(--vkl-text-text-white);
+    font-size: var(--vkl-font-size-font-s18);
+    line-height: var(--vkl-specing-height18);
+    font-weight: var(--vkl-weight-bold);
+    transition: .3s;
+    background: var(--vkl-text-text-1);
+    display: inline-block;
+    border-radius: 8px;
+    padding: 17px 20px;
+    position: relative;
+    z-index: 1;
+    text-transform: capitalize;
+    & span{
+        color: var(--vkl-text-text-white);
+        display: inline-block;
+        transform: rotate(-45deg);
+        transition: .3s;
+    }
+    &::after{
+        position:absolute;
+        content: "";
+        left: 8px;
+        top: 10px;
+        background: #35AA43;
+        height: 30px;
+        width: 30px;
+        border-radius: 50px;
+        transition: .3s;
+        z-index: -1;
+    }
+    &:hover{
+        color: var(--vkl-text-text-white);
+        & span{
+            transform: rotate(0);
+            transition: .3s;
+        }
+        &::after{
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            border-radius: 8px;
+        }
+    }
+}
+
+// banner btn 8
+
+.vl-banner-btn-8 {
+    & .btn-primary-8{
+        @media #{$xs}{
+            margin-bottom: 30px;
+        }
+    }
+    
+}
+
+
+// banner btn 9
+
+.vl-thumb-btn{
+    & .btn-primary-9{
+        color: var(--vkl-text-text-7);
+    }
+}
+
+// subcribtion btn 
+
+.subcribtion__btn{
+    & .btn-primary-9{
+        &::after{
+            left: 104px;
+        }
+        &:hover{
+            &::after{
+                left: 0;
+            }
+        }
+    }
+}
+
+.subcribtion__btn{
+    & .btn-primary-10{
+        &::after {
+            left: 127px;
+        }
+        &:hover{
+            &::after{
+                left: 0;
+            }
+        }
+    }
+}
+
+// home thumb btn 
+
+.vl-thumb-btn{
+    & .btn-primary-10 {
+        color: #fff !important;
+    }
+}

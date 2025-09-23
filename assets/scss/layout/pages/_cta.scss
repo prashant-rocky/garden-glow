@@ -1,0 +1,406 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  7.7 CTA css
+/*----------------------------------------*/
+
+// cta Home One
+.vl-cta-area{
+    position: relative;
+    z-index: 1;
+    &::after{
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(16, 17, 16, 0.70);
+        z-index: -1;
+    }
+    & .vl-cta-thumb {
+        position: absolute;
+        right: 0;
+        top: 0;
+        @media #{$lg}{
+            right: -300px;
+            top: 160px;
+        }
+        @media #{$md,$xs}{
+            position: relative;
+            margin-bottom: -72px;
+            text-align: center;
+        }
+    }
+}
+
+.vl-cta-content{
+    & p{
+        color: var(--vkl-text-text-4);
+    }
+}
+
+// cta 5
+
+.cta-bg-4{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    &::after{
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        height:100%;
+        width: 100%;
+        background: rgba(16, 17, 16, 0.80);
+        z-index: -1;
+    }
+}
+
+.vl-newstleer-4{
+    position: relative;
+    input[type="email"] {
+        width: 470px;
+        border-radius: 8px;
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height18);
+        font-weight: var(--vkl-weight-medium);
+        color: var(--vkl-text-text-3);
+        height: 64px;
+        position: relative;
+        z-index: 1;
+        @media #{$xs}{
+            width: 100%;
+        }
+        &::placeholder{
+            color: var(--vkl-text-text-3);
+            font-size: var(--vkl-font-size-font-s18);
+            line-height: var(--vkl-specing-height18);
+            font-weight: var(--vkl-weight-medium);
+        }
+    }
+    & .newsl-btn {
+        position: absolute;
+        right: 142px;
+        top: 4px;
+        @media #{$lg}{
+            right: 240px;
+        }
+        @media #{$md}{
+            right: 117px;
+        }
+        @media #{$xs}{
+            right: 0px;
+        }
+        @media #{$xl}{
+            right:90px;
+        }
+    }
+    
+    
+}
+
+
+.vl-shape2{
+    & .cta-cmn-shape{
+        position: absolute;
+        bottom: 0;
+        &-1{
+            left: 0;
+        }
+        &-2{
+            right: 0;
+        }
+    }
+}
+
+
+.cta-bg-4.thumb-bg {
+    @media #{$xs}{
+        padding: 20px;
+    }
+    
+}
+
+.vl-newstleer-4 .newsl-btn {
+    & .vl-primary-btn-4{
+        @media #{$xs}{
+            margin-top: 15px;
+            width: 100%;
+        }
+    }
+    @media #{$xs}{
+        position: relative;
+    }
+}
+
+// Cta Home 5
+
+.vl-cta-text{
+    &-5{
+        & .title{
+            font-size: var(--vkl-font-size-font-s44);
+            line-height: var(--vkl-specing-height52);
+            font-weight: var(--vkl-weight-bold);
+            color: var(--vkl-text-text-white);
+        }
+    }
+    &-6{
+        & .title{
+            font-size: var(--vkl-font-size-font-s56);
+            line-height: var(--vkl-specing-height62);
+            font-weight: var(--vkl-weight-bold);
+            color: var(--vkl-text-text-12);
+            @media #{$xs}{
+                font-size: var(--vkl-font-size-font-s32);
+                line-height: var(--vkl-specing-height42);
+            }
+        }
+    }
+}
+
+.vl-cta-form-wrap{
+    &-5{
+        input[type="email"]{
+            border-radius: 8px;
+            background: rgba(210, 249, 181, 0.20);
+            color: var(--vkl-text-text-white);
+            border: transparent;
+            font-size: var(--vkl-font-size-font-s20);
+            line-height: var(--vkl-specing-height20);
+            font-weight: var(--vkl-weight-semibold);
+            height: 68px;
+            &::placeholder{
+                font-size: var(--vkl-font-size-font-s20);
+                line-height: var(--vkl-specing-height20);
+                font-weight: var(--vkl-weight-semibold);
+            }
+        }
+        & .vl-cta-btn5{
+            position: absolute;
+            right: 8px;
+            top:8px;
+            bottom: 8px;
+        }
+    }
+    &-6{
+        input[type="email"]{
+            border-radius: 88px;
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            background: rgba(255, 255, 255, 0.10);
+
+            color: var(--vkl-text-text-12);
+            border: transparent;
+            font-size: var(--vkl-font-size-font-s20);
+            line-height: var(--vkl-specing-height20);
+            font-weight: var(--vkl-weight-semibold);
+            height: 72px;
+            &::placeholder{
+                font-size: var(--vkl-font-size-font-s20);
+                line-height: var(--vkl-specing-height20);
+                font-weight: var(--vkl-weight-semibold);
+                color: var(--vkl-text-text-12)
+            }
+        }
+    }
+}
+
+.cta-border-bottom {
+    border-bottom: 1px solid #79BF8B;
+    margin-left: 7px;
+    margin-right: 7px;
+    margin-bottom: 40px;
+    &-6{
+        border-bottom: 1px solid #303C19;
+    }
+}
+
+.vl-cta-btn6 {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+
+// cta home 7
+
+.vl-cta-from-7{
+    position: relative;
+    z-index: 1;
+    width: 470px;
+    margin: 0 auto;
+    @media #{$md,$xs}{
+        width: 100%;
+    }
+    input[type="email"] {
+        width: 470px;
+        background: var(--vkl-bg-bg-11);
+        height: 72px;
+        border-radius: 88px;
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height18);
+        color: var(--vkl-text-text-3);
+        transition: .3s;
+        font-weight: var(--vkl-weight-medium);
+        @media #{$md,$xs}{
+            width: 100%;
+        }
+        &::placeholder{
+            color: var(--vkl-text-text-3);
+            font-size: var(--vkl-font-size-font-s18);
+            line-height: var(--vkl-specing-height18);
+            font-weight: var(--vkl-weight-medium);
+        }
+    }
+    & .vl-primary-btn{
+        &-7{
+            position: absolute;
+            right: 8px;
+            top: 8px;
+            @media #{$xs}{
+                position: relative;
+            }
+        }
+    }
+}
+
+
+// cta style 8
+
+.vl-cta-content-wrap-8{
+    & .title{
+        font-size: var(--vkl-font-size-font-s44);
+        line-height: var(--vkl-specing-height52);
+        font-weight: var(--vkl-weight-bold);
+        color: var(--vkl-text-text-19);
+        @media #{$xs}{
+            font-size: var(--vkl-font-size-font-s30);
+            line-height: var(--vkl-specing-height40)
+        }
+    }
+}
+
+.vl-cta-from-wrap-8{
+    text-align: right;
+    input[type="email"]{
+        width: 420px;
+        height: 68px;
+        border-radius: 8px;
+        border: 1px solid rgba(0, 76, 48, 0.10);
+        background: #ECF8DF;
+        color:var(--vkl-text-text-19);
+        font-size: var(--vkl-font-size-font-s20);
+        line-height: var(--vkl-specing-height20);
+        font-weight: var(--vkl-weight-semibold);
+        &::placeholder{
+            color:var(--vkl-text-text-19);
+            font-size: var(--vkl-font-size-font-s20);
+            line-height: var(--vkl-specing-height20);
+            font-weight: var(--vkl-weight-semibold);
+        }
+        @media #{$md,$xs}{
+            width: 100%;
+        }
+    }
+}
+
+.vl-cta-submit-btn-8{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    @media #{$xs}{
+       position: relative;
+       text-align: center;
+       right: 0;
+       width: 100%;
+    }
+    top: 8px;
+    & .btn-primary-8{
+        @media #{$xs}{
+            width: 100%;
+        }
+    }
+}
+
+// cta style 9 
+
+.vl-cta-wrap9{
+    background: var(--vkl-text-text-8);
+    border-radius: 16px;
+    position: relative;
+    & .vl-section-title{
+        & .title{
+            font-size: var(--vkl-font-size-font-s44);
+            line-height: var(--vkl-specing-height44);
+            font-weight: var(--vkl-weight-bold);
+            color: var(--vkl-text-text-7);
+            transition: .3s;
+        }
+        & p{
+            color: var(--vkl-text-text-7);
+            transition: .3s;
+        }
+    }
+}
+
+.vl-cta-wrap9{
+    margin-top: -210px;
+}
+
+.vl-cta-shape9{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    &-2{
+        right: 0;
+        left: auto;
+    }
+}
+
+// cta style 10
+.vl-cta-btn-10{
+    text-align: end;
+    @media #{$lg,$md,$xs}{
+        text-align: start;
+    }
+}
+
+
+.vl-bottom-shape-line10 img {
+    left: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    bottom: -30px;
+}
+
+
+.vl-cta-wrap-10{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    padding-top: 100px;
+    padding-bottom: 48px;
+    &::after{
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(90deg, #161A12 -22.6%, rgba(22, 26, 18, 0.50) 55.48%, #161A12 119.69%);
+        z-index: -1;
+    }
+}
+
+
+.vl-cta-content-10{
+    & .title{
+        color: var(--vkl-text-text-white);
+        transition: .3s;
+        font-size: var(--vkl-font-size-font-s44);
+        line-height: var(--vkl-specing-height52);
+        font-weight: var(--vkl-weight-bold);
+    }
+}

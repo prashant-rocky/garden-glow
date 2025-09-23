@@ -1,0 +1,72 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.9 Breadcrumb
+/*----------------------------------------*/
+
+.vl-breadcrumb{
+    &-area{
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding-top: 238px;
+        padding-bottom: 140px;
+        position: relative;
+        z-index: 1;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            background: linear-gradient(105deg, rgba(16, 17, 16, 0.81) 2.71%, rgba(16, 17, 16, 0.09) 137.92%);
+        }
+    }
+    &-content{
+        & .vl-breadcrumb{
+            &-title{
+                color: var(--vkl-text-text-white);
+                font-size: var(--vkl-font-size-font-s64);
+                line-height: var(--vkl-specing-height64);
+                font-weight: var(--vkl-weight-bold);
+                @media #{$xs}{
+                    font-size: var(--vkl-font-size-font-s40);
+                    line-height: var(--vkl-specing-height40);
+                }
+            }
+        }
+        & ul{
+            & li{
+                display: inline-block;
+                color: var(--vkl-text-text-white);
+                font-size: var(--vkl-font-size-font-s20);
+                line-height: var(--vkl-specing-height20);
+                font-weight: var(--vkl-weight-medium);
+                transition: all 0.3s ease;
+                &:hover{
+                    color: var(--vkl-text-text-1);
+                    transition: all 0.3s ease;
+                    font-weight: var(--vkl-weight-bold);
+                }
+                &.active{
+                    color: var(--vkl-text-text-white);
+                    font-weight: var(--vkl-weight-bold);
+                }
+                
+                & a{
+                    color: var(--vkl-text-text-white);
+                    font-size: var(--vkl-font-size-font-s20);
+                    line-height: var(--vkl-specing-height20);
+                    font-weight: var(--vkl-weight-medium);
+                }
+            }
+            span.dvir {
+                color: var(--vkl-text-text-white);
+                margin: 0 6px;
+                font-size: 16px;
+            }
+        }
+    }
+}

@@ -1,0 +1,163 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.15 Checkout css 
+/*----------------------------------------*/
+
+.vl-checkout-bill-area{
+    padding: 32px;
+    border-radius: 8px;
+}
+
+.vl-checkout-bill{
+    &-title{
+        color: var(--vkl-text-text-2);
+        font-size: var(--vkl-font-size-font-s32);
+        line-height: var(--vkl-specing-height32);
+        font-weight: var(--vkl-weight-bold);
+    }
+}
+
+.vl-checkout-input{
+    margin-bottom: 20px;
+    & label{
+        color: var(--vkl-text-text-2);
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height18);
+        font-weight: var(--vkl-weight-bold);
+        margin-bottom: 14px;
+    }
+    & input[type="text"],
+      input[type="number"],
+      textarea{
+        height: 54px;
+        background: var(--vkl-text-text-white);
+        color: var(--vkl-text-text-3);
+        font-size: var(--vkl-font-size-font-s16);
+        line-height: var(--vkl-specing-height16);
+        font-weight: var(--vkl-weight-medium);
+        border: transparent;
+        border-radius: 8px;
+        &::placeholder{
+            color: var(--vkl-text-text-3);
+            font-size: var(--vkl-font-size-font-s16);
+            line-height: var(--vkl-specing-height16);
+            font-weight: var(--vkl-weight-medium);
+        }
+    }
+    & textarea{
+        height: 140px;
+    }
+}
+
+.vl-checkout-place{
+    & .vl-checkout-coupon-form{
+        input[type="text"]{
+            height: 66px;
+            background: var(--vkl-bg-bg-2);
+            color: var(--vkl-text-text-3);
+            font-size: var(--vkl-font-size-font-s16);
+            line-height: var(--vkl-specing-height16);
+            font-weight: var(--vkl-weight-medium);
+            border: transparent;
+            border-radius: 8px;
+            border: 1px solid #EAEAEA;
+            &::placeholder{
+                color: var(--vkl-text-text-3);
+                font-size: var(--vkl-font-size-font-s16);
+                line-height: var(--vkl-specing-height16);
+                font-weight: var(--vkl-weight-medium);
+            }
+        }
+    }
+}
+
+.vl-checkout-coupon-form-input{
+    & .title{
+        color: var(--vkl-text-text-2);
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height18);
+        font-weight: var(--vkl-weight-bold);    
+    }
+}
+
+.vl-checkout-coupon-form-input-box{
+    position: relative;
+    & .vl-checkout-btn {
+        position: absolute;
+        right: 6px;
+        top: 6px;
+    }
+}
+
+
+// checkout box
+.vl-checkout-box{
+    background: var(--vkl-text-text-1);
+    padding: 32px;
+    border-radius: 8px;
+    & .title-1{
+        color: var(--vkl-text-text-white);
+        font-size: var(--vkl-font-size-font-s24);
+        line-height: var(--vkl-specing-height24);
+        font-weight: var(--vkl-weight-bold);
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+        border-bottom: 1px solid #4FB45B;
+    }
+    &-info-list{
+        & ul{
+            & li.info-list-header{
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 24px;
+                & .title{
+                    color: var(--vkl-text-text-white);
+                    font-size: var(--vkl-font-size-font-s18);
+                    line-height: var(--vkl-specing-height18);
+                    font-weight: var(--vkl-weight-bold);
+                }
+                & .price{
+                    color: var(--vkl-text-text-white);
+                    font-size: var(--vkl-font-size-font-s16);
+                    line-height: var(--vkl-specing-height16);
+                    font-weight: var(--vkl-weight-medium);
+                }
+            }
+        }
+    }
+}
+
+// check out btn
+.vl-checkout-btn{
+    & .vl-primary-btn{
+        & .text{
+            background: var(--vkl-text-text-white);
+            color: var(--vkl-text-text-2);
+        }
+        & .arrow{
+            background: var(--vkl-text-text-white);
+            color: var(--vkl-text-text-2);
+        }
+    }
+}
+
+.vl-checkout-payment-list label {
+    color: #fff;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.vl-checkout-payment-list{
+        &  ul li {
+        padding-top: 24px;
+        border-top: 1px solid rgba(255,255,255,.20);
+        padding-bottom: 24px;
+    }
+        input[type="radio"] {
+        width: 20px;
+        height: 17px;
+        accent-color: transparent;
+    }
+}
+

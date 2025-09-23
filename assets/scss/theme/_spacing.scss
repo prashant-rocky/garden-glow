@@ -1,0 +1,261 @@
+@use '../utils' as *;
+
+
+/*----------------------------------------*/
+/*  1.3 Default Spacing
+/*----------------------------------------*/
+
+/*--
+    - Margin & Padding
+-----------------------------------------*/
+/*-- Margin Top --*/
+@for $i from 1 through 100 {
+    .mt-#{1 * $i}{margin-top: 1px * $i;}
+}
+/*-- Margin Bottom --*/
+@for $i from 1 through 100 {
+    .mb-#{1 * $i}{margin-bottom: 1px *$i;}
+}
+/*-- Margin Left --*/
+@for $i from 1 through 100 {
+    .ml-#{1 * $i}{margin-left: 1px * $i;}
+}
+
+/*-- Margin Right --*/
+@for $i from 1 through 100 {
+    .mr-#{1 * $i}{margin-right: 1px *$i;}
+}
+
+/*-- Padding Top --*/
+@for $i from 1 through 100 {
+    .pt-#{1 * $i}{padding-top: 1px *$i;}
+}
+
+/*-- Padding Bottom --*/
+@for $i from 1 through 100 {
+    .pb-#{1 * $i}{padding-bottom: 1px *$i;}
+}
+
+/*-- Padding Left --*/
+@for $i from 1 through 100 {
+    .pl-#{1 * $i}{padding-left: 1px *$i;}
+}
+
+/*-- Padding Right --*/
+@for $i from 1 through 100 {
+    .pr-#{1 * $i}{padding-right: 1px *$i;}
+}
+
+.p-40{
+    padding: 40px;
+}
+
+
+// padding top
+.pt-218{
+    padding-top: 218px;
+}
+.pt-262{
+    padding-top: 262px;
+}
+.pt-100{
+    @media #{$md,$xs}{
+        padding-top: 50px;
+    }
+}
+.pt-250{
+    @media #{$md,$xs}{
+        padding-top: 100px;
+    }
+}
+
+.margin-left-space-55{
+    margin-left: -55px;
+    @media #{$lg,$md,$xs}{
+        margin-left: 0;
+    }
+}
+
+// padding bottom
+.pb-254{
+    padding-bottom: 254px;
+    @media #{$md}{
+        padding-bottom: 160px;
+    }
+    @media #{$xs}{
+        padding-bottom: 160px;
+    }
+}
+
+.pb-100{
+    @media #{$md,$xs}{
+        padding-bottom: 50px;
+    }
+}
+.pb-70{
+    @media #{$md,$xs}{
+        padding-bottom: 20px;
+    }
+}
+
+.pb-100{
+    @media #{$md,$xs}{
+        padding-bottom: 50px;
+    }
+}
+
+
+// padding left
+.pl-20{
+    @media #{$md,$xs}{
+        padding-left: 0;
+    }
+}
+
+// padding right
+.pr-60{
+    @media #{$md,$xs}{
+        padding-right: 0;
+    }
+}
+
+// margin right
+.mr-70{
+    @media #{$md,$xs}{
+        margin-right: 0;
+    }
+}
+
+.mr-30{
+    @media #{$md,$xs}{
+        margin-right: 0;
+    }
+}
+
+.mr-40{
+    @media #{$xs}{
+        margin-right: 0;
+    }
+}
+
+
+.mr-10{
+    @media #{$md,$xs}{
+        margin-right: 0;
+    }
+}
+
+.mr-50{
+    @media #{$lg,$md,$xs}{
+        margin-right: 0;
+    }
+}
+
+.mr-55{
+    @media #{$lg,$md,$xs}{
+        margin-right: 0;
+    }
+}
+
+.mr-60{
+    @media #{$lg,$md,$xs}{
+        margin-right: 0;
+    }
+}
+
+.mr-20{
+    @media #{$lg,$md,$xs}{
+        margin-right: 0;
+    }
+}
+
+.mr-24{
+    @media #{$xs}{
+        margin-right: 0;
+    }
+}
+
+.mr-46{
+    @media #{$lg,$md,$xs}{
+        margin-right: 0;
+    }
+}
+
+// margin bottom
+.mb-95{
+    @media #{$lg,$md,$xs}{
+        margin-bottom: 60px;
+    }
+}
+.mb-60{
+    @media #{$lg,$md,$xs}{
+        margin-bottom: 30px;
+    }
+}
+
+.mb-70{
+    @media #{$lg,$md,$xs}{
+        margin-bottom: 30px;
+    }
+}
+
+.mb-48{
+    @media #{$md,$xs}{
+        margin-bottom: 30px;
+    }
+}
+
+
+// margin left
+.ml-60{
+    @media #{$lg,$md,$xs}{
+        margin-left: 0;
+    }
+}
+
+.ml-35{
+    @media #{$md,$xs}{
+        margin-left: 0;
+    }
+}
+
+.ml-40{
+    @media #{$xs}{
+        margin-left: 0;
+    }
+}
+
+.ml-30{
+    @media #{$md,$xs}{
+        margin-left: 0;
+    }
+}
+.ml-60{
+    @media #{$md,$xs}{
+        margin-left: 0;
+    }
+}
+
+.ml-10{
+    @media #{$md,$xs}{
+        margin-left: 0;
+    }
+}
+
+.ml-100{
+    @media #{$lg,$md,$xs}{
+        margin-left: 0;
+    }
+}
+
+.ml-50{
+    @media #{$lg,$md,$xs}{
+        margin-left: 0;
+    }
+}
+
+.ml-70{
+    @media #{$lg,$md,$xs}{
+        margin-left: 0;
+    }
+}

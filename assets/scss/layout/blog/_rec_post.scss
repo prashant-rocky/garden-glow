@@ -1,0 +1,41 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  5.3 Recent Post css
+/*----------------------------------------*/ 
+
+.rec__post{
+    &-thumb{
+        & img{
+            height: 100px;
+            width: 100px;
+            border-radius: 8px;
+        }
+    }
+    &-content{
+        &-meta{
+            color: var(--vkl-text-text-3);
+            font-size: var(--vkl-font-size-font-s20);
+            line-height: var(--vkl-specing-height20);
+            font-weight: var(--vkl-weight-medium);
+            & span{
+                & img{
+                    margin-right: 4px;
+                }
+            }
+        }
+        &-title{
+            color: var(--vkl-text-text-2);
+            font-size: var(--vkl-font-size-font-s20);
+            line-height: var(--vkl-specing-height28);
+            font-weight: var(--vkl-weight-bold);
+            position: relative;
+            z-index: 1;
+            transition: .3s;
+            &:hover{
+                color: var(--vkl-text-text-1);
+                transition: .3s;
+            }
+        }
+    }
+}

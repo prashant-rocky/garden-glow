@@ -1,0 +1,181 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  1.2 Common Classes
+/*----------------------------------------*/
+
+
+br{
+	@media #{$xl,$md,$xs}{
+		display: none;
+	}
+}
+ul{ 
+	li{
+		list-style: none;
+	}
+}
+.w-img{
+	& img{
+		width: 100%;
+	}
+}
+.m-img{
+	& img{
+		max-width: 100%;
+	}
+}
+
+.br{
+	&-8{
+		border-radius: 8px;
+	}
+	&-20{
+		border-radius: 20px;
+	}
+	&-30{
+		border-radius: 30px;
+	}
+	&-70{
+		border-radius: 70px;
+	}
+}
+
+p{
+	margin: 0;
+}
+.fix {
+    overflow:hidden
+}
+.clear{
+    clear: both;
+}
+
+.z-index-1{
+	z-index: 1;
+}
+
+.z-index-11{
+	z-index: 11;
+}
+
+.overflow-y-visible{
+	overflow-x: hidden;
+	overflow-y: visible;
+}
+.overflow-x-visible{
+	overflow-x: visible;
+	overflow-y: hidden;
+}
+
+.p-relative{
+	position: relative;
+}
+.p-absolute{
+	position: absolute;
+}
+
+.vl-upper{
+	text-transform: uppercase; 
+}
+
+
+// common color
+.vkl-white-menubg{
+	border-radius: 100px;
+	border: 1px solid rgba(255, 255, 255, 0.10);
+	background: rgba(255, 255, 255, 0.15);
+	backdrop-filter: blur(4px);
+	@media #{$lg,$md,$xs}{
+		padding: 20px;
+	}
+	&-5{
+		background: var(--vkl-bg-bg-3);
+		border-radius: 8px;
+		padding: 12px;
+		@media #{$lg,$md,$xs}{
+			padding: 20px;
+		}
+	}
+}
+
+.vkl-text-white{
+	color: var(--vkl-text-text-white);
+}
+.vkl-text-blck{
+	color: var(--vkl-text-text-2);
+}
+.vkl-text-blck-5{
+	color: var(--vkl-text-text-7);
+}
+.vkl-blck-bg-9{
+	background: var(--vkl-text-text-7);
+}
+
+
+.vkl-white-bg{
+	background: var(--vkl-text-text-white) !important;
+}
+.vkl-green-bg{
+	background: var(--vkl-text-text-1);
+}
+.vkl-blc-bg{
+	background: var(--vkl-text-text-5);
+}
+.vkl-blc-bg-6{
+	background: var(--vkl-bg-bg-7);
+}
+.vkl-cream-bg{
+	background: var(--vkl-bg-bg-2) !important;
+}
+.vkl-black-bg-6{
+	background: var(--vkl-bg-bg-8);
+}
+.vkl-black-gray-bg-6{
+	background: var(--vkl-bg-bg-9);
+}
+.vkl-yellow-gray{
+	background: var(--vkl-bg-bg-11);
+}
+.vkl-yellow-gray-wh{
+	background: var(--vkl-bg-bg-12);
+}
+.vkl-green-bg-7{
+	background: var(--vkl-text-text-19);
+}
+
+.vkl-green-offwhite{
+	background: var(--vkl-bg-bg-14);
+}
+.vkl-green-offwhite-2{
+	background: var(--vkl-bg-bg-15);
+}
+
+// Home 5 common bg 
+
+.bg-green{
+	background: var(--vkl-bg-bg-4);
+}
+.bg-off-green{
+	background: var(--vkl-bg-bg-3);
+}
+.bg-offwhite-5bg{
+	background: var(--vkl-bg-bg-5);
+}
+.bg-testimonial-bg{
+	background: var(--vkl-bg-bg-6);
+}
+
+
+.vkl-offgren-bg{
+	border-radius: 8px;
+	background: rgba(31, 161, 46, 0.10);
+	backdrop-filter: blur(5px);
+}
+
+
+.thumb-bg{
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}

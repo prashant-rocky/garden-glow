@@ -1,0 +1,47 @@
+@use '../../utils' as *;
+
+// process home 3
+.vl-process-bg{
+    padding: 50px;
+    @media #{$xs}{
+        padding: 30px;
+    }
+}
+
+
+.vl-proces-sticky{
+    position: sticky;
+    top: 150px;
+}
+.vl-single-process-item{
+    transition: .3s;
+    & .subtitle{
+        background: var(--vkl-bg-bg-2);
+        border-radius: 8px;
+        padding: 10px 16px;
+        color: var(--vkl-text-text-2);
+        font-size: var(--vkl-font-size-font-s18);
+        line-height: var(--vkl-specing-height18);
+        font-weight: var(--vkl-weight-ex-bold);
+        display: inline-block;
+        transition: .3s;
+    }
+    & .title{
+        color: var(--vkl-text-text-2);
+        font-size: var(--vkl-font-size-font-s20);
+        line-height: var(--vkl-specing-height20);
+        font-weight: var(--vkl-weight-bold);
+        transition: .3s;
+        &:hover{
+            color: var(--vkl-text-text-1);
+            transition: .3s;
+        }
+    }
+    &:hover{
+        & .subtitle{
+            background: var(--vkl-text-text-1);
+            color: var(--vkl-text-text-white);
+            transition: .3s;
+        }
+    }
+}

@@ -1,0 +1,76 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.16 Circle Percentage
+/*----------------------------------------*/
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    bottom: 149px;
+    left: 148px;
+    @media #{$xs}{
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+  }
+
+  .singlecard {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 326px;
+  }
+
+  .progress-circle {
+    width: 56px;
+    height: 56px;
+    position: relative;
+  }
+
+  .progress-circle svg {
+    width: 62px;
+    height: 62px;
+    transform: rotate(-90deg);
+  }
+
+  .progress-circle circle {
+    fill: none;
+    stroke-width: 6;
+    stroke-linecap: round;
+  }
+
+  .progress-circle circle.bg {
+    stroke: var(--vkl-bg-bg-2);
+  }
+
+  .progress-circle circle.progress {
+    stroke: var(--vkl-text-text-1);
+    stroke-dasharray: 176;
+    stroke-dashoffset: 176;
+    transition: stroke-dashoffset 1s ease;
+  }
+
+  .progress-circle span {
+    position: absolute;
+    top: 55%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--vkl-text-text-2);
+  }
+
+  .text .title {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    color: var(--vkl-text-text-2);
+    line-height: 1.4;
+  }

@@ -1,0 +1,60 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.17 Prize css
+/*----------------------------------------*/
+
+.vl-prize-box-wrap{
+    & .thumb{
+
+    }
+    & .prize-btn{
+        background: var(--vkl-text-text-12);
+        font-size: var(--vkl-font-size-font-s24);
+        line-height: var(--vkl-specing-height24);
+        font-weight: var(--vkl-weight-bold);
+        padding: 14px 20px;
+        border-radius: 16px;
+        display: inline-block;
+
+    }
+    & .prize-title{
+        color:var(--vkl-text-text-12);
+        font-size: var(--vkl-font-size-font-s24);
+        line-height: var(--vkl-specing-height32);
+        font-weight: var(--vkl-weight-bold);
+        padding: 0 28px;
+        @media #{$lg,$md,$xs}{
+            padding: 0;
+            font-size: var(--vkl-font-size-font-s20);
+            line-height: var(--vkl-specing-height30);
+        }
+        &-2{
+            font-size: var(--vkl-font-size-font-s44);
+            line-height: var(--vkl-specing-height52);
+            @media #{$lg,$md,$xs}{
+                font-size: var(--vkl-font-size-font-s34);
+                line-height: var(--vkl-specing-height44);
+            }
+        }
+    }
+    & .sub-heading{
+        color: var(--vkl-text-text-12);
+        font-size: var(--vkl-font-size-font-s32);
+        line-height: var(--vkl-specing-height32);
+        font-weight: var(--vkl-weight-semibold);
+        @media #{$lg,$md,$xs}{
+            padding: 0;
+            font-size: var(--vkl-font-size-font-s20);
+            line-height: var(--vkl-specing-height30);
+        }
+    }
+}
+.vl-prize-box-wrap.mt-65{
+    @media #{$lg}{
+        margin-top: 55px;
+    }
+    @media #{$md,$xs}{
+        margin-top: 0px;
+    }
+}
